@@ -12,4 +12,3 @@ graph LR
     B --> C[Azure Stream Analytics]
     C --> D[Azure Blob Storage]
     D --> E[CSV Output or Tableau Dashboard]
-
