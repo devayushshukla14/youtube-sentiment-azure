@@ -4,7 +4,7 @@ An end-to-end real-time NLP pipeline that captures live YouTube comments, analyz
 
 ---
 
-## 🚀 Architecture Overview
+## Architecture Overview
 
 ```mermaid
 graph LR
@@ -13,7 +13,7 @@ graph LR
     C --> D[Azure Blob Storage]
     D --> E[CSV Output or Tableau Dashboard]
 ```
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Python** (YouTube API client, Sentiment Analysis, Event Hub producer)
 - **Hugging Face Transformers** (`distilbert-base-uncased-finetuned-sst-2-english`)
@@ -22,7 +22,7 @@ graph LR
 - **Azure Blob Storage** (Output sink for processed comment data)
 - **Rule-Based Classifier** (Basic logic on keywords)
 
-## ⚙️ How It Works
+## How It Works
 
 1. **YouTube Comment Fetcher (Python Script)**  
    - Connects to the YouTube Data API to fetch the latest comments from a given video (`
@@ -49,3 +49,26 @@ Mission: Impossible – The Final Reckoning | Official Trailer (2025 Movie)`).
    - JSON output is downloaded and converted to a **CSV file** manually or via script.
    
 ---
+
+## Azure Stream Analytics Job overview
+
+**Input Details**
+![Screenshot 2025-05-31 192219](https://github.com/user-attachments/assets/494669e9-e510-456d-a6f1-c1d788a1d575)
+
+**Output Details**
+![Screenshot 2025-05-31 192257](https://github.com/user-attachments/assets/d0cda87a-82e4-43aa-ad85-93f6d5265b56)
+
+**Query**
+![Screenshot 2025-05-31 192341](https://github.com/user-attachments/assets/318d1b03-8c60-46b6-8c83-47ab91adf6d8)
+    - Since I was trying to explore Azure I just copied all input into output
+
+## Data Visualization
+![image](https://github.com/user-attachments/assets/3a2e1d5b-1398-494c-a4cb-8212b83c0aa5)
+
+![image](https://github.com/user-attachments/assets/2d73c4c3-cbdc-41c5-a48c-7dd43746ba8e)
+
+![image](https://github.com/user-attachments/assets/1e38fe37-648c-4728-b992-e4448d1afac3)
+
+![image](https://github.com/user-attachments/assets/97607f87-5258-42af-a854-d3576559eb72)
+
+
