@@ -8,7 +8,8 @@ An end-to-end real-time NLP pipeline that captures live YouTube comments, analyz
 
 ```mermaid
 graph LR
-    A[YouTube Comment Fetcher (Python Script)] --> B[Azure Event Hub]
+    A[YouTube Comment Fetcher] --> B[Azure Event Hub]
     B --> C[Azure Stream Analytics]
     C --> D[Azure Blob Storage]
-    D --> E[CSV Output / Tableau Dashboard]
+    D --> E[CSV Output or Tableau Dashboard]
+
